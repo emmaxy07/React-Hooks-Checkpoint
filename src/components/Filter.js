@@ -1,14 +1,25 @@
 import React from 'react'
 
-function Filter({ searchfield, searchChange }) {
+function Filter({Movie, changeHandler, input}) {
   return (
-       <div className='pa2'>
-        <input 
-        type = 'search' 
-        placeholder = 'search movies'
-        onChange = {searchChange} 
-        />
-        </div>
+    <div>
+      <input type="text" 
+      placeholder="Search"
+      onChange={changeHandler} />
+      {
+        Movie.filter((movie) => {
+          if(input === ""){
+            return null
+          } else if(movie.title.toLowerCase().includes(input.toLowerCase())){
+            return movie
+          }
+        }).map((movie,key)=>(
+          <div key={key}>
+            <p>{movie.title}</p>
+          </div>
+        ))
+      }
+    </div>
   )
 }
 
