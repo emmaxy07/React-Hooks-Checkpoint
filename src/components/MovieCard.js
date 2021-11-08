@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import AddMovie from './AddMovie';
 import Filter from './Filter';
-import MovieList from './MovieList';
 
 function MovieCard() {
   const moviesList = [
@@ -48,10 +48,14 @@ function MovieCard() {
 
   return(
     <div>
+      <div className="p-5">
       <Filter Movie={Movie}
       changeHandler={changeHandler}
       input={input} />
-      <MovieList Movie={Movie} />
+      </div>
+      <br />
+      <AddMovie movieList={Movie}/>
+      {/* <MovieList Movie={Movie} /> */}
     </div>
   )
 }

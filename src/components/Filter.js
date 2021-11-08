@@ -10,7 +10,8 @@ function Filter({Movie, changeHandler, input}) {
         Movie.filter((movie) => {
           if(input === ""){
             return null
-          } else if(movie.title.toLowerCase().includes(input.toLowerCase())){
+          } else if(movie.title.toLowerCase().
+          includes(input.toLowerCase())){
             return movie
           }
         }).map((movie,key)=>(
