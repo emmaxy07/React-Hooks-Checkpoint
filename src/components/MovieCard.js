@@ -10,6 +10,7 @@ function MovieCard() {
       description: `The aging patriarch of an organized crime 
              dynasty transfers control of his clandestine 
              empire to his reluctant son.`,
+      src: `https://www.youtube.com/embed/gaAjDV4Yvbc`,
       rate: 5,
     },
     {
@@ -19,14 +20,16 @@ function MovieCard() {
              a devil-may-care soapmaker form an underground
               fight club that evolves into something much, 
               much more.`,
+      src: `https://www.youtube.com/embed/J8FRBYOFu2w`,
       rate: 5,
     },
     {
-      title: `The illusinist`,
+      title: `The illusionist`,
       posterUrl: `https://m.media-amazon.com/images/M/MV5BY2VkMzZlZDAtNTkzNS00MDIzLWFmOTctMWQwZjQ1OWJiYzQ1XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SY1000_SX700_AL_.jpg`,
       description: `In turn-of-the-century Vienna, 
              a magician uses his abilities to secure the 
              love of a woman far above his social standing.`,
+      src: `https://www.youtube.com/embed/i0xO64icGSY`,
       rate: 4,
     },
     {
@@ -35,6 +38,7 @@ function MovieCard() {
       description: `A former neo-nazi skinhead
               tries to prevent his younger brother 
               from going down the same wrong path that he did.`,
+      src: `https://www.youtube.com/embed/W2Pq_ij3nPU`,
       rate: 5,
     },
   ];
@@ -44,6 +48,8 @@ function MovieCard() {
   const changeHandler = e => {
     setInput(e.target.value)
   }
+
+  
 
 
   return(
@@ -55,7 +61,6 @@ function MovieCard() {
       </div>
       <br />
       <AddMovie movieList={Movie}/>
-      {/* <MovieList Movie={Movie} /> */}
     </div>
   )
 }

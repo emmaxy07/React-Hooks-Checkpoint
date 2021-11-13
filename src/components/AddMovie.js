@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import MovieList from "./MovieList";
 
 function AddMovie ({ movieList }) {
-  console.log(movieList)
   const [movie, setMovie] = useState(movieList);
-  console.log(movie)
   const [title, setTitle] = useState('')
   const [posterUrl, setPosterUrl] = useState('')
   const [description, setDescription] = useState('')
   const [rate, setRate] = useState('')
 
   const handleClick = () => {
-      // update the books state property by adding a new book
+      // update the movies state property by adding a new movie
       setMovie([...movie, { title: title, posterUrl: posterUrl, description: description, rate: rate}]);
       setTitle('')
       setPosterUrl('')
